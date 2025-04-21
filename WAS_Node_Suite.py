@@ -13801,7 +13801,7 @@ class WAS_Diffusers_Hub_Model_Loader:
 
         from huggingface_hub import snapshot_download
         model_path = os.path.join(local_dir, repo_id)
-        ignore_patterns = ["*.ckpt","*.safetensors","*.onnx"]
+        ignore_patterns = ["*.ckpt","*.onnx"]
         use_auth_token = token if token is not None else False
         snapshot_download(repo_id=repo_id, repo_type="model", local_dir=model_path, revision=revision, use_auth_token=use_auth_token, ignore_patterns=ignore_patterns)
 
